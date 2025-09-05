@@ -3,67 +3,243 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          darkMode: "dark",
-        },
-      };
-    </script>
-
     <title>TechFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
   </head>
-  <body class="bg-slate-800">
+  <body class="bg-[#161641] relative overflow-y-auto">
     <header
-      class="h-[50px] md:h-[70px] flex items-center justify-between bg-slate-900"
+      class="h-[70px] fixed top-0 left-0 w-[100%] bg-slate-900 border-b-[0.3px] border-gray-300"
     >
-      <h1
-        class="font-bold cursor-pointer text-md md:text-2xl ml-4 text-blue-500"
-      >
-        TechFlow
-      </h1>
+      <div class="flex h-full flex-row items-center justify-between mx-5">
+        <h1 class="text-blue-500 text-xl cursor-pointer font-bold">TechFlow</h1>
+        <nav class="h-full hidden md:block">
+          <ul
+            class="list-style-none flex items-center gap-[3rem] cursor-pointer h-full"
+          >
+            <li
+              class="text-gray-500 text-md hover:text-blue-700 transition-all duration-300"
+            >
+              Home
+            </li>
+            <li
+              class="text-gray-500 text-md hover:text-blue-700 transition-all duration-300"
+            >
+              Features
+            </li>
+            <li
+              class="text-gray-500 text-md hover:text-blue-700 transition-all duration-300"
+            >
+              Pricing
+            </li>
+            <li
+              class="text-gray-500 text-md hover:text-blue-700 transition-all duration-300"
+            >
+              Contact
+            </li>
+          </ul>
+        </nav>
 
-      <nav>
-        <ul class="hidden list-style-none md:flex items-center gap-12 text-md">
-          <li
-            class="text-gray-500 font-bold cursor-pointer hover:font-bold hover:text-blue-500"
+        <div class="hidden items-center h-full md:flex">
+          <button
+            class="text-[#f0f0f0] font-bold shadow-md shadow-slate-900 hover:-translate-y-0.5 rounded-xl px-5 py-3 hover:bg-blue-600 bg-blue-500 rounded-lg transtion-all duration-200"
           >
-            Home
-          </li>
-          <li
-            class="text-gray-500 font-bold cursor-pointer hover:font-bold hover:text-blue-500"
-          >
-            Featues
-          </li>
-          <li
-            class="text-gray-500 font-bold cursor-pointer hover:font-bold hover:text-blue-500"
-          >
-            Pricing
-          </li>
-          <li
-            class="text-gray-500 font-bold cursor-pointer hover:font-bold hover:text-blue-500"
-          >
-            Contact
-          </li>
-        </ul>
-      </nav>
-
-      <button
-        class="hidden md:block px-5 mr-4 font-bold py-2 text-white bg-blue-500 hover:bg-blue-700 hover:-translate-y-0.5 rounded xl transition-all duration-500 cursor-pointer"
-      >
-        Get Started
-      </button>
-      <button class="block mr-4 cursor-pointer text-gray-500 md:hidden">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
+            Get Started
+          </button>
+        </div>
+        <button class="text-white cursor-pointer bg md:hidden">
+          <i
+            class="fas fa-bars text-xl hover:text-blue-500 transition-all duration-200"
+          ></i>
+        </button>
+      </div>
     </header>
+
     <section
-      class="bg-gradient-to-br from-slate-800 to-sky-700 h-[90vh]"
-    ></section>
+      class="mx-5 mt-[100px] mt-3 mt-7 mb-6 flex flex-col md:gap-[5rem] gap-[2rem] md:flex-row md:items-center"
+    >
+      <div>
+        <h2 class="text-white font-bold text-4xl md:text-6xl">
+          Build Amazing
+          <span class="text-blue-500">Digital Products</span> Faster
+        </h2>
+
+        <p class="text-gray-400 text-lg mt-8">
+          Streamline your development workflow with our powerful suite of tools
+          designed for modern teams. Ship faster, scale better, and delight your
+          users.
+        </p>
+
+        <div class="flex flex-col gap-6 md:flex-row w-full mt-8">
+          <button
+            class="rounded-xl w-full text-xl font-bold bg-blue-600 hover:scale-[1.05] hover:bg-blue-700 hover:border hover:border-3 hover:border-gray-300 text-white py-4 shadow-lg shadow-blue-300/30 transition duration-300"
+          >
+            Start free trial
+          </button>
+          <button
+            class="rounded-xl w-full text-xl font-bold hover:bg-blue-500 border border-3 border-gray-300 text-white py-4 transition duration-300"
+          >
+            Watch demo
+          </button>
+        </div>
+        <div class="mt-8 flex flex-row gap-6">
+          <p class="text-gray-500 text-md">
+            <i class="fas fa-check text-green-500 mr-3"></i> 14 day free trial
+          </p>
+          <p class="text-gray-500 text-md">
+            <i class="fas fa-check text-green-500 mr-3"></i> No credit card
+            required
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="w-full h-[50vh] p-4 flex flex-col justify-around md:h-[60vh] bg-slate-800 rounded-2xl border-[0.2px] border-gray-300"
+      >
+        <div class="bg-slate-600 p-4 rounded-lg">
+          <p class="text-blue-500 text-sm mb-3">$ npm install techflow</p>
+
+          <p class="text-white">
+            <i class="fas fa-check mr-2"></i> Dependencies installed
+          </p>
+          <p class="text-white">
+            <i class="fas fa-check mr-2"></i> Project initialized
+          </p>
+          <p class="text-white">
+            <i class="fas fa-check mr-2"></i> Ready to deploy
+          </p>
+        </div>
+
+        <div class="flex flex-row items-center gap-3">
+          <div
+            class="flex-1 flex flex-col items-center p-2 rounded-xl bg-slate-900"
+          >
+            <i
+              class="fas fa-rocket text-primary text-blue-500 text-xl mb-2"
+            ></i>
+            <p class="text-gray-300">Fast Deploy</p>
+          </div>
+          <div
+            class="flex-1 flex flex-col items-center p-2 rounded-xl bg-green-900"
+          >
+            <i class="fas fa-shield-alt text-green-500 text-xl mb-2"></i>
+            <p class="text-gray-300">Secure</p>
+          </div>
+          <div
+            class="flex-1 flex flex-col items-center p-2 rounded-xl bg-slate-900"
+          >
+            <i class="fas fa-chart-line text-blue-500 text-xl mb-2"></i>
+            <p class="text-gray-300">Scalable</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-900 mt-7">
+      <div class="mx-5 py-7">
+        <h2
+          class="text-2xl md:text-4xl font-bold text-[#f0f0f0] text-center mb-3 mt-7"
+        >
+          Everything you need to succeed
+        </h2>
+
+        <p
+          class="text-gray-400 text-center md:text-xl text-lg mt-6 md:w-[50%] mx-auto mb-3"
+        >
+          Powerful features designed to accelerate your development process and
+          deliver exceptional results.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[2rem] mt-12">
+          <div class="p-6 rounded-xl bg-slate-800">
+            <p><i class="fas fa-chart-line text-blue-500 text-3xl mb-5"></i></p>
+            <h3 class="text-white text-2xl mb-5">Lightning fast</h3>
+            <p class="text-gray-400 text-xl">
+              Optimized performance that delivers blazing-fast load times and
+              smooth user experiences across all devices.
+            </p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-800">
+            <p><i class="fas fa-chart-line text-blue-500 text-3xl mb-5"></i></p>
+            <h3 class="text-white text-2xl mb-5">Lightning fast</h3>
+            <p class="text-gray-400 text-xl">
+              Optimized performance that delivers blazing-fast load times and
+              smooth user experiences across all devices.
+            </p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-800">
+            <p><i class="fas fa-chart-line text-blue-500 text-3xl mb-5"></i></p>
+            <h3 class="text-white text-2xl mb-5">Lightning fast</h3>
+            <p class="text-gray-400 text-xl">
+              Optimized performance that delivers blazing-fast load times and
+              smooth user experiences across all devices.
+            </p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-800">
+            <p><i class="fas fa-chart-line text-blue-500 text-3xl mb-5"></i></p>
+            <h3 class="text-white text-2xl mb-5">Lightning fast</h3>
+            <p class="text-gray-400 text-xl">
+              Optimized performance that delivers blazing-fast load times and
+              smooth user experiences across all devices.
+            </p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-800">
+            <p><i class="fas fa-chart-line text-blue-500 text-3xl mb-5"></i></p>
+            <h3 class="text-white text-2xl mb-5">Lightning fast</h3>
+            <p class="text-gray-400 text-xl">
+              Optimized performance that delivers blazing-fast load times and
+              smooth user experiences across all devices.
+            </p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-800">
+            <p><i class="fas fa-chart-line text-blue-500 text-3xl mb-5"></i></p>
+            <h3 class="text-white text-2xl mb-5">Lightning fast</h3>
+            <p class="text-gray-400 text-xl">
+              Optimized performance that delivers blazing-fast load times and
+              smooth user experiences across all devices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hamburger Menu Overlay -->
+    <div
+      class="bg-slate-800 absolute top-0 right-[100%] z-3 w-[80%] rounded-bl-2xl"
+    >
+      <ul class="list-style-none flex flex-col cursor-pointer h-full">
+        <li
+          class="text-gray-500 text-md pl-4 py-3 border-b-[1px] border-gray-300 hover:text-blue-700 transition-all duration-300"
+        >
+          Home
+        </li>
+        <li
+          class="text-gray-500 text-md pl-4 py-3 border-b-[1px] border-gray-300 hover:text-blue-700 transition-all duration-300"
+        >
+          Features
+        </li>
+        <li
+          class="text-gray-500 text-md pl-4 py-3 border-b-[1px] border-gray-300 hover:text-blue-700 transition-all duration-300"
+        >
+          Pricing
+        </li>
+        <li
+          class="text-gray-500 text-md pl-4 py-3 border-b-[1px] border-gray-300 hover:text-blue-700 transition-all duration-300"
+        >
+          Contact
+        </li>
+      </ul>
+
+      <div class="h-20 flex items-center mx-5">
+        <button
+          class="text-[#f0f0f0] mx-auto font-bold shadow-md shadow-slate-900 hover:-translate-y-0.5 rounded-xl px-10 py-3 hover:bg-blue-600 bg-blue-500 rounded-lg transtion-all duration-200"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
   </body>
 </html>
